@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INSPIRO - Image Converter</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">
+            <img src="images/logo.png" alt="Logo">
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="tools.html">Tools</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Use</a></li>
+        </ul>
+    </nav>
+
+    <!-- Image Slider -->
+    <div class="slider-container">
+        <div class="slider">
+            <div class="slide active">
+                <img src="images/slider1.jpg" alt="Slide 1">
+            </div>
+            <div class="slide">
+                <img src="images/slider2.jpg" alt="Slide 2">
+            </div>
+        </div>
+    </div>
+
+    <!-- Converter Section -->
+    <main class="converter">
+        <div class="upload-section">
+            <input type="file" id="fileInput" hidden accept="image/*">
+            <div class="drop-zone" id="dropZone">
+                <i class="fas fa-cloud-upload-alt"></i>
+                <p>Drag & Drop or Click to Upload</p>
+            </div>
+        </div>
+
+        <div class="preview-section">
+            <img id="imagePreview" alt="Preview">
+            <div class="file-size">
+                <span id="originalSize">Original: -</span>
+                <span id="convertedSize">Converted: -</span>
+            </div>
+        </div>
+
+        <div class="controls">
+            <div class="format-buttons">
+                <button data-format="pdf">PDF</button>
+                <button data-format="jpg">JPG</button>
+                <button data-format="png">PNG</button>
+            </div>
+            
+            <div class="quality-control">
+                <label>Quality: <span id="qualityValue">80</span>%</label>
+                <input type="range" id="quality" min="1" max="100" value="80">
+            </div>
+            
+            <button class="convert-btn" id="convertBtn">Convert Now</button>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="social-links">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+        <p>&copy; 2023 INSPIRO. All rights reserved.</p>
+    </footer>
+
+    <!-- Notification -->
+    <div id="notification" class="notification">
+        <i class="fas fa-check-circle"></i>
+        <span>Conversion Successful!</span>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
